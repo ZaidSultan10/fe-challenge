@@ -1,4 +1,4 @@
-import {BUTTON1,BUTTONEQUAL,BUTTONADD} from './type.js'
+import {BUTTON1,BUTTONEQUAL,BUTTONADD,BUTTONCLEAR,BUTTONRESETNEW} from './type.js'
 
 export const buttonValue = (data) => {
     try{
@@ -19,6 +19,22 @@ export const buttonAdd = (data) => {
 export const buttonEqual = (data) => {
     try{
         return { type: BUTTONEQUAL, payload: data }
+    }catch(e){
+        console.log(e)
+    }
+}
+
+export const buttonClear = (data) => {
+    try{
+        return { type: BUTTONCLEAR, payload: data }
+    }catch(e){
+        console.log(e)
+    }
+}
+
+export const buttonResetNew = (data) => {
+    try{
+        return { type: BUTTONRESETNEW, payload: data }
     }catch(e){
         console.log(e)
     }

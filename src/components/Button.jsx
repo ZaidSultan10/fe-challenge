@@ -1,6 +1,6 @@
 import React,{ useEffect, useState} from 'react'
 import { useDispatch } from 'react-redux'
-import { buttonValue,buttonEqual,buttonAdd } from '../actions/sum'
+import { buttonValue,buttonEqual,buttonAdd,buttonClear,buttonResetNew } from '../actions/sum'
 import { useSelector } from 'react-redux'
 
 const Button = ({title}) => {
@@ -25,6 +25,10 @@ const Button = ({title}) => {
             dispatch(buttonEqual(item))
         }else if(typeof(result) == 'object' && item === '+'){
             dispatch(buttonAdd(sum))
+        }else if(item === 'CLEAR'){
+            dispatch(buttonClear(0))
+        }else if(typeof(result) == 'object' && item !== '+'&& item !== '='){
+            dispatch(buttonResetNew(item))
         }else{
             dispatch(buttonValue(item))
         }

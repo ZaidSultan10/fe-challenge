@@ -1,4 +1,4 @@
-import {BUTTON1,BUTTONEQUAL,BUTTONADD} from '../actions/type.js'
+import {BUTTON1,BUTTONEQUAL,BUTTONADD,BUTTONCLEAR,BUTTONRESETNEW} from '../actions/type.js'
 
 let initialValue = {
     result:0
@@ -24,6 +24,18 @@ const sum = (state = initialValue, action) => {
                result:0 + action.payload + '+' 
                }
 
+        case BUTTONCLEAR:
+           return {
+               ...state,
+               result:action.payload 
+               }
+
+        case BUTTONRESETNEW:
+           return {
+               ...state,
+               result:action.payload 
+               }
+               
         default: 
            return state
     }

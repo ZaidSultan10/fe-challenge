@@ -34,6 +34,9 @@ const buttonObject = [{
 },{
     label:'=',
     value:'='
+},{
+    label:'CLEAR',
+    value:'CLEAR'
 }]
 
 export default buttonObject
