@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { useSelector } from 'react-redux'
 
 const Display = () => {
@@ -9,6 +9,7 @@ const Display = () => {
 
     result && typeof(result) == 'object' && result.map((item) => {
         sum = sum + Number(item)
+        return sum
     })
 
   return (
