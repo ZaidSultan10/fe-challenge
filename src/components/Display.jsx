@@ -3,8 +3,6 @@ import { useSelector } from 'react-redux'
 
 const Display = () => {
 
-    // const [result,setResult] = useState(0)
-
     const {result} = useSelector(state => state.sum)
     console.log('result >>> ',result)
 

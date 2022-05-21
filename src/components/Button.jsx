@@ -1,16 +1,13 @@
-import React,{useContext, useState} from 'react'
+import React,{useContext, useEffect, useState} from 'react'
 import { useDispatch } from 'react-redux'
 import { buttonValue } from '../actions/sum'
 
-const Button = () => {
-    const buttonObject = [{
-        label:1,
-        value:1
-    },{
-        label:2,
-        value:2
-    }]
+const Button = ({title}) => {
     const [button1,setButton1] = useState(1)
+
+    useEffect(() => {
+        setButton1(title)
+    },[title])
 
     const dispatch = useDispatch()
 
