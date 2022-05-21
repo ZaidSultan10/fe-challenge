@@ -1,4 +1,4 @@
-import {BUTTON1} from '../actions/type.js'
+import {BUTTON1,BUTTONEQUAL} from '../actions/type.js'
 
 let initialValue = {
     result:0
@@ -9,7 +9,13 @@ const sum = (state = initialValue, action) => {
         case BUTTON1:
            return {
                ...state,
-               result:action.payload
+               result:state.result === 0 ? action.payload : state.result + action.payload.toString()
+               }
+
+        case BUTTONEQUAL:
+           return {
+               ...state,
+               result:action.payload === '=' && state.result.split('+')
                }
         
         default: 

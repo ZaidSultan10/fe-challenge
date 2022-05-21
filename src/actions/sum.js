@@ -1,9 +1,16 @@
-import {BUTTON1} from './type.js'
+import {BUTTON1,BUTTONEQUAL} from './type.js'
 
 export const buttonValue = (data) => {
     try{
-        console.log('data',data)
         return { type: BUTTON1, payload: data }
+    }catch(e){
+        console.log(e)
+    }
+}
+
+export const buttonEqual = (data) => {
+    try{
+        return { type: BUTTONEQUAL, payload: data }
     }catch(e){
         console.log(e)
     }

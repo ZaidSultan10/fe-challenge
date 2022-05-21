@@ -1,15 +1,20 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 
 const Display = () => {
 
     const {result} = useSelector(state => state.sum)
-    console.log('result >>> ',result)
+
+    let sum = 0
+
+    result && typeof(result) == 'object' && result.map((item) => {
+        sum = sum + Number(item)
+    })
 
   return (
     <div>
-        <div style={{border:'1px solid',width:'150px',height:'40px'}}>
-            {result}
+        <div style={{width:'300px',padding:'20px',border:'1px solid'}}>
+            {typeof(result) == 'object' ? sum : result}
         </div>
     </div>
   )

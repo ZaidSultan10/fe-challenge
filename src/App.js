@@ -8,11 +8,13 @@ function App() {
   return (
     <div className="App">
       <Display />
-      {
-        buttonObject && buttonObject.map((item) => (
-          <Button title={item.value} />
-        ))
-      }
+      <div style={{padding:'20px',display:'flex',border:'1px solid',flexWrap:'wrap',width:'300px',justifyContent:'space-between',alignItems:'center'}}>
+        {
+          buttonObject && buttonObject.map((item) => (
+            <Button title={item.value} />
+          ))
+        }
+      </div>
     </div>
   );
 }

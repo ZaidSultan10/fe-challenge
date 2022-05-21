@@ -5,9 +5,6 @@ export const ConfigureStore = () => {
      const store = createStore(
         combineReducers({
             sum
-            // comments,
-            // partners,
-            // promotions
         }),
     )  
     return store
