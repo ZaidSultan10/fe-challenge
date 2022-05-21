@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Display />
-      <Button title={`1`} />
+      <Button />
     </div>
   );
 }
